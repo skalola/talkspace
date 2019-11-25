@@ -1,0 +1,154 @@
+{
+    "therapists": [
+        {
+            "id": 26,
+            "therapistSince": 1418883176,
+            "primaryLicense": "L.P.A",
+            "name": "Sigmund Freud",
+            "shiftInfo": {
+                "start": 29040,
+                "duration": 21780
+            }
+        },
+        {
+            "id": 57,
+            "therapistSince": 1485153923,
+            "primaryLicense": "Psy.D.",
+            "name": "Carl Jung",
+            "shiftInfo": {
+                "start": 39360,
+                "duration": 5340
+            }
+        },
+        {
+            "id": 44,
+            "therapistSince": 1231403459,
+            "primaryLicense": "A.N.P",
+            "name": "B.F. Skinner",
+            "shiftInfo": {
+                "start": 65640,
+                "duration": 540
+            }
+        },
+        {
+            "id": 11,
+            "therapistSince": 1058283648,
+            "primaryLicense": "L.P.C",
+            "name": "Carl Rogers",
+            "shiftInfo": {
+                "start": 67920,
+                "duration": 780
+            }
+        },
+        {
+            "id": 52,
+            "therapistSince": 1426813567,
+            "primaryLicense": "L.C.S.W",
+            "name": "Alfred Kinsey",
+            "shiftInfo": {
+                "start": 4620,
+                "duration": 1320
+            }
+        },
+        {
+            "id": 57,
+            "therapistSince": 1349038383,
+            "primaryLicense": "Ed.D.",
+            "name": "Erik Erikson",
+            "shiftInfo": {
+                "start": 76860,
+                "duration": 5760
+            }
+        },
+        {
+            "id": 36,
+            "therapistSince": 1388567901,
+            "primaryLicense": "L.P.A",
+            "name": "Jean Piaget",
+            "shiftInfo": {
+                "start": 65940,
+                "duration": 180
+            }
+        },
+        {
+            "id": 46,
+            "therapistSince": 1187820072,
+            "primaryLicense": "L.C.S.W",
+            "name": "Albert Ellis",
+            "shiftInfo": {
+                "start": 67860,
+                "duration": 720
+            }
+        },
+        {
+            "id": 49,
+            "therapistSince": 1523620331,
+            "primaryLicense": "Ph.D.",
+            "name": "Albert Bundura",
+            "shiftInfo": {
+                "start": 180,
+                "duration": 1500
+            }
+        },
+        {
+            "id": 33,
+            "therapistSince": 1521231797,
+            "primaryLicense": "A.N.P",
+            "name": "Kay Redfield Jamison",
+            "shiftInfo": {
+                "start": 71580,
+                "duration": 2220
+            }
+        },
+        {
+            "id": 31,
+            "therapistSince": 1156376916,
+            "primaryLicense": "Ed.D.",
+            "name": "Philip Zimbardo",
+            "shiftInfo": {
+                "start": 52920,
+                "duration": 3000
+            }
+        },
+        {
+            "id": 51,
+            "therapistSince": 1204051650,
+            "primaryLicense": "Ed.D.",
+            "name": "Ivan Pavlov",
+            "shiftInfo": {
+                "start": 53820,
+                "duration": 8700
+            }
+        },
+        {
+            "id": 21,
+            "therapistSince": 1003835514,
+            "primaryLicense": "L.C.S.W",
+            "name": "Abraham Maslow",
+            "shiftInfo": {
+                "start": 67680,
+                "duration": 540
+            }
+        },
+        {
+            "id": 21,
+            "therapistSince": 1417234334,
+            "primaryLicense": "L.P.A",
+            "name": "R.D. Laing",
+            "shiftInfo": {
+                "start": 52980,
+                "duration": 2580
+            }
+        },
+        {
+            "id": 4,
+            "therapistSince": 1484491470,
+            "primaryLicense": "L.P.A",
+            "name": "William Glasser",
+            "shiftInfo": {
+                "start": 7260,
+                "duration": 2820
+            }
+        }
+    ]
+}
