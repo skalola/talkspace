@@ -7,43 +7,28 @@
 //
 
 import Foundation
-import UIKit
-
 
 struct Therapist: Decodable {
-    var id: Int
-    var therapistSince: Int
-    var primaryLicense: String
-    var name: String
-    var start: Int
-    var duration: Int
-
-    init(id: Int, therapistSince: Int, primaryLicense: String, name: String, start: Int, duration: Int) {
-        self.id = id
-        self.therapistSince = therapistSince
-        self.primaryLicense = primaryLicense
-        self.name = name
-        self.start = start
-        self.duration = duration
+    let id: Int
+    let therapistSince: Int
+    let primaryLicense: String
+    let name: String
+    let info: ShiftInfo
+    
+    struct ShiftInfo: Decodable {
+        let start: Int
+        let duration: Int
+        
+        var end: Int {
+            return start + duration
+        }
     }
     
     enum CodingKeys: String, CodingKey {
-        case id = "id",
-        therapistSince = "therapistSince",
-        primaryLicense = "primaryLicense",
-        name = "name",
-        start = "start",
-        duration = "duration"
-    }
-    
-    enum status {
-        case allTherapist
-        case activeTherapist
-        case noTherapist
+        case id
+        case therapistSince
+        case primaryLicense
+        case name
+        case info = "shiftInfo"
     }
 }
-
-
-
-
-

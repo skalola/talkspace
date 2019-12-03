@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,8 +11,7 @@
         <!--Therapist Roster-->
         <scene sceneID="46b-Bc-l02">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pUf-2F-Th9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="YtT-rt-9hs" customClass="ViewController" customModule="iOS_Interview" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YtT-rt-9hs" customClass="ListViewController" customModule="iOS_Interview" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EBf-em-vHf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +34,7 @@
                                     <color key="titleColor" red="0.88916774610000004" green="0.88916774610000004" blue="0.88916774610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="sortByGap:" destination="YtT-rt-9hs" eventType="touchUpInside" id="R04-Tl-6QY"/>
+                                    <action selector="sortByGap" destination="YtT-rt-9hs" eventType="touchUpInside" id="5zR-A2-81t"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqa-2q-gQA">
@@ -47,7 +46,7 @@
                                     <color key="titleColor" red="0.88916774610000004" green="0.88916774610000004" blue="0.88916774610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="sortByStartingSoon:" destination="YtT-rt-9hs" eventType="touchUpInside" id="D0a-ad-g7F"/>
+                                    <action selector="sortByStartingSoon" destination="YtT-rt-9hs" eventType="touchUpInside" id="Gyw-Rx-5wL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrU-h0-B3e">
@@ -59,7 +58,7 @@
                                     <color key="titleColor" red="0.88916774610000004" green="0.88916774610000004" blue="0.88916774610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="sortByOnDuty:" destination="YtT-rt-9hs" eventType="touchUpInside" id="bbz-dA-brb"/>
+                                    <action selector="sortByOnDuty" destination="YtT-rt-9hs" eventType="touchUpInside" id="lRb-rf-GVy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,12 +68,10 @@
                     <navigationItem key="navigationItem" title="Therapist Roster" id="2Wx-1M-MmM"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="gapButton" destination="uo6-lB-bwh" id="aWb-wJ-DfT"/>
-                        <outlet property="onDutyButton" destination="vrU-h0-B3e" id="wUa-Dd-UVr"/>
-                        <outlet property="startingSoonButton" destination="Uqa-2q-gQA" id="s5s-8s-4Vp"/>
                         <outlet property="tableView" destination="kPW-aH-Pjc" id="HEh-lI-Ae3"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pUf-2F-Th9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1473.913043478261" y="193.52678571428569"/>
         </scene>

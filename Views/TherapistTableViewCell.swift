@@ -6,7 +6,6 @@
 //  Copyright © 2019 Talkspace. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class TherapistTableViewCell: UITableViewCell {
@@ -14,11 +13,13 @@ class TherapistTableViewCell: UITableViewCell {
     @IBOutlet weak var pHdSinceLabel: UILabel!
     @IBOutlet weak var onDutyLabel: UILabel!
     
+    func render(_ item: ListViewModel.DataItem) {
+        nameLabel.text = item.name
+        pHdSinceLabel.text = item.pHdSince
+        onDutyLabel.text = item.onDuty
+    }
     
-    static let nib = UINib(nibName: "TherapistTableViewCell", bundle: nil)
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    static var nib: UINib {
+        return UINib(nibName: "TherapistTableViewCell", bundle: nil)
     }
 }

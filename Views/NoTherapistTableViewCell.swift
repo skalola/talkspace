@@ -6,17 +6,17 @@
 //  Copyright © 2019 Talkspace. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class NoTherapistTableViewCell: UITableViewCell {
 
     @IBOutlet weak var noTherapistLabel: UILabel!
     
-    static let nib = UINib(nibName: "NoTherapistTableViewCell", bundle: nil)
+    func render(_ item: ListViewModel.EmptyItem) {
+        noTherapistLabel.text = item.title
+    }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    static var nib: UINib {
+        return UINib(nibName: "NoTherapistTableViewCell", bundle: nil)
     }
 }

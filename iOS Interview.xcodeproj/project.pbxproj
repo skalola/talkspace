@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F30A84223057DEC0018FDBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30A84123057DEC0018FDBF /* AppDelegate.swift */; };
-		0F30A84423057DEC0018FDBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30A84323057DEC0018FDBF /* ViewController.swift */; };
+		0F30A84423057DEC0018FDBF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30A84323057DEC0018FDBF /* ListViewController.swift */; };
 		0F30A84723057DEC0018FDBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F30A84523057DEC0018FDBF /* Main.storyboard */; };
 		0F30A84923057DED0018FDBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F30A84823057DED0018FDBF /* Assets.xcassets */; };
 		0F30A84C23057DED0018FDBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F30A84A23057DED0018FDBF /* LaunchScreen.storyboard */; };
@@ -18,12 +18,15 @@
 		4136D5A823746B680013D340 /* TherapistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136D5A723746B680013D340 /* TherapistTableViewCell.swift */; };
 		41E04411238D77CC00752435 /* NoTherapistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41E04410238D77CC00752435 /* NoTherapistTableViewCell.xib */; };
 		41E04413238D791200752435 /* NoTherapistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E04412238D791200752435 /* NoTherapistTableViewCell.swift */; };
+		B56965152396DC8B000E48B6 /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56965142396DC8B000E48B6 /* DateFormatter+Ext.swift */; };
+		B5BD3F372396CDFB00FC73E0 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BD3F362396CDFB00FC73E0 /* ListViewModel.swift */; };
+		B5BD3F392396CEB900FC73E0 /* TherapistInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BD3F382396CEB900FC73E0 /* TherapistInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F30A83E23057DEC0018FDBF /* iOS Interview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Interview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F30A84123057DEC0018FDBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0F30A84323057DEC0018FDBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0F30A84323057DEC0018FDBF /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		0F30A84623057DEC0018FDBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F30A84823057DED0018FDBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F30A84B23057DED0018FDBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +37,9 @@
 		4136D5A723746B680013D340 /* TherapistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapistTableViewCell.swift; sourceTree = "<group>"; };
 		41E04410238D77CC00752435 /* NoTherapistTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoTherapistTableViewCell.xib; sourceTree = "<group>"; };
 		41E04412238D791200752435 /* NoTherapistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTherapistTableViewCell.swift; sourceTree = "<group>"; };
+		B56965142396DC8B000E48B6 /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
+		B5BD3F362396CDFB00FC73E0 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		B5BD3F382396CEB900FC73E0 /* TherapistInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapistInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 				4136D5A223739CE30013D340 /* Views */,
 				4136D5A123739CD70013D340 /* Controllers */,
 				0F30A85323057E8C0018FDBF /* Data */,
+				B56965132396DC7E000E48B6 /* Extensions */,
 				0F30A84023057DEC0018FDBF /* iOS Interview */,
 				0F30A83F23057DEC0018FDBF /* Products */,
 			);
@@ -90,6 +97,7 @@
 		4136D5A023739CCC0013D340 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B5BD3F382396CEB900FC73E0 /* TherapistInfo.swift */,
 				4136D5A52373B07C0013D340 /* Therapist.swift */,
 			);
 			path = Models;
@@ -98,7 +106,7 @@
 		4136D5A123739CD70013D340 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0F30A84323057DEC0018FDBF /* ViewController.swift */,
+				B5BD3F352396CDE500FC73E0 /* List */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -112,6 +120,23 @@
 				41E04412238D791200752435 /* NoTherapistTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B56965132396DC7E000E48B6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B56965142396DC8B000E48B6 /* DateFormatter+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B5BD3F352396CDE500FC73E0 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				0F30A84323057DEC0018FDBF /* ListViewController.swift */,
+				B5BD3F362396CDFB00FC73E0 /* ListViewModel.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,9 +213,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56965152396DC8B000E48B6 /* DateFormatter+Ext.swift in Sources */,
 				4136D5A62373B07C0013D340 /* Therapist.swift in Sources */,
-				0F30A84423057DEC0018FDBF /* ViewController.swift in Sources */,
+				0F30A84423057DEC0018FDBF /* ListViewController.swift in Sources */,
+				B5BD3F372396CDFB00FC73E0 /* ListViewModel.swift in Sources */,
 				4136D5A823746B680013D340 /* TherapistTableViewCell.swift in Sources */,
+				B5BD3F392396CEB900FC73E0 /* TherapistInfo.swift in Sources */,
 				41E04413238D791200752435 /* NoTherapistTableViewCell.swift in Sources */,
 				0F30A84223057DEC0018FDBF /* AppDelegate.swift in Sources */,
 			);
