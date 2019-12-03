@@ -16,6 +16,8 @@
 		4136D5A42373ACB20013D340 /* TherapistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136D5A32373ACB20013D340 /* TherapistTableViewCell.xib */; };
 		4136D5A62373B07C0013D340 /* Therapist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136D5A52373B07C0013D340 /* Therapist.swift */; };
 		4136D5A823746B680013D340 /* TherapistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136D5A723746B680013D340 /* TherapistTableViewCell.swift */; };
+		41E04411238D77CC00752435 /* NoTherapistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41E04410238D77CC00752435 /* NoTherapistTableViewCell.xib */; };
+		41E04413238D791200752435 /* NoTherapistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E04412238D791200752435 /* NoTherapistTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		4136D5A32373ACB20013D340 /* TherapistTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TherapistTableViewCell.xib; sourceTree = "<group>"; };
 		4136D5A52373B07C0013D340 /* Therapist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Therapist.swift; sourceTree = "<group>"; };
 		4136D5A723746B680013D340 /* TherapistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapistTableViewCell.swift; sourceTree = "<group>"; };
+		41E04410238D77CC00752435 /* NoTherapistTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoTherapistTableViewCell.xib; sourceTree = "<group>"; };
+		41E04412238D791200752435 /* NoTherapistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTherapistTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 			children = (
 				4136D5A32373ACB20013D340 /* TherapistTableViewCell.xib */,
 				4136D5A723746B680013D340 /* TherapistTableViewCell.swift */,
+				41E04410238D77CC00752435 /* NoTherapistTableViewCell.xib */,
+				41E04412238D791200752435 /* NoTherapistTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +177,7 @@
 				0F30A84923057DED0018FDBF /* Assets.xcassets in Resources */,
 				0F30A84723057DEC0018FDBF /* Main.storyboard in Resources */,
 				0FE37B942347375D00089908 /* therapists09.json in Resources */,
+				41E04411238D77CC00752435 /* NoTherapistTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +191,7 @@
 				4136D5A62373B07C0013D340 /* Therapist.swift in Sources */,
 				0F30A84423057DEC0018FDBF /* ViewController.swift in Sources */,
 				4136D5A823746B680013D340 /* TherapistTableViewCell.swift in Sources */,
+				41E04413238D791200752435 /* NoTherapistTableViewCell.swift in Sources */,
 				0F30A84223057DEC0018FDBF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

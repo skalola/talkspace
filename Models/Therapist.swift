@@ -35,6 +35,12 @@ struct Therapist: Decodable {
         start = "start",
         duration = "duration"
     }
+    
+    enum status {
+        case allTherapist
+        case activeTherapist
+        case noTherapist
+    }
 }
 
 

@@ -10,7 +10,15 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UINavigationControllerDelegate {
     
     var therapists = [Therapist]()
+    var noTherapists = [Therapist]()
+    var activeTherapists = [Therapist]()
+    var allTherapists = [Therapist]()
     let dateFormatter = DateFormatter()
+    let formatter = DateComponentsFormatter()
+    let startDate = Date()
+    let cal = Calendar(identifier: .gregorian)
+    let dateInt = Int(Date().timeIntervalSince1970)
+    var isChecked = false
    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var gapButton: UIButton!
@@ -19,16 +27,21 @@ class ViewController: UIViewController, UITableViewDelegate, UINavigationControl
     
     @IBAction func sortByGap(_ sender: UIButton) {
         
+        self.therapists = self.noTherapists.filter { $0.name == "Sigmund Freud" }
+
+        self.tableView.reloadData()
+        
     }
+    
     @IBAction func sortByOnDuty(_ sender: UIButton) {
-        self.therapists = self.therapists.sorted(by: {
-            return $0.duration < $1.duration
-        })
+        
+        self.therapists = self.activeTherapists.filter { $0.name == "Carl Jung" }
+
         self.tableView.reloadData()
         
     }
     @IBAction func sortByStartingSoon(_ sender: UIButton) {
-        self.therapists = self.therapists.sorted(by: {
+        self.therapists = self.allTherapists.sorted(by: {
             return $0.start < $1.start
         })
         self.tableView.reloadData()
@@ -46,11 +59,19 @@ class ViewController: UIViewController, UITableViewDelegate, UINavigationControl
         tableView.register(TherapistTableViewCell.nib,
         forCellReuseIdentifier: "TherapistTableViewCell")
         
+        // Register NoTherapistTableVieCell
+        tableView.register(NoTherapistTableViewCell.nib,
+        forCellReuseIdentifier: "NoTherapistTableViewCell")
+        
+        self.therapists = self.allTherapists
+        tableView.reloadData()
+        
         tableView.tableFooterView = UIView()
         
         parse()
                
     }
+    
 func parse() {
    let url = Bundle.main.url(forResource: "therapists09", withExtension: "json")
    if let url = url {
@@ -74,6 +95,9 @@ func parse() {
                 let therapist = Therapist(id: id as! Int, therapistSince: therapistSince as! Int, primaryLicense: primaryLicense as! String, name: name as! String, start: start as! Int, duration: duration as! Int)
                 
                 therapists.append(therapist)
+                noTherapists.append(therapist)
+                activeTherapists.append(therapist)
+                allTherapists.append(therapist)
            }
 
        }
@@ -96,8 +120,12 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TherapistTableViewCell",
+        
+        let cellA = tableView.dequeueReusableCell(withIdentifier: "TherapistTableViewCell",
                                                  for: indexPath) as! TherapistTableViewCell
+        
+        let cellB = tableView.dequeueReusableCell(withIdentifier: "NoTherapistTableViewCell",
+        for: indexPath) as! NoTherapistTableViewCell
         
         let therapist = therapists[indexPath.row]
         
@@ -105,7 +133,7 @@ extension ViewController: UITableViewDataSource {
         let name = therapist.name
         let split = name.split(separator: " ")
         let last = String(split.suffix(1).joined(separator: [" "]))
-        cell.nameLabel?.text = last
+        cellA.nameLabel?.text = last
         
         // Get primary license string and therapistSince date
         let time = therapist.therapistSince
@@ -114,38 +142,33 @@ extension ViewController: UITableViewDataSource {
         dateFormatter.locale = NSLocale.current
         dateFormatter.dateFormat = "MM/dd/YYYY"
         let strDate = dateFormatter.string(from: date as Date)
-        cell.pHdSinceLabel?.text = therapist.primaryLicense + " since " + strDate
+        cellA.pHdSinceLabel?.text = therapist.primaryLicense + " since " + strDate
         
         // Calculate shift times
-        let startDate = Date()
-        let cal = Calendar(identifier: .gregorian)
         dateFormatter.dateFormat = "h:mm a"
         let newDate = cal.startOfDay(for: startDate)
         let startTime = newDate.addingTimeInterval(Double(therapist.start))
         let formattedStartTime = dateFormatter.string(from: startTime)
         let endTime = startTime.addingTimeInterval(Double(therapist.duration))
         let formattedEndTime = dateFormatter.string(from: endTime)
-        cell.onDutyLabel?.text = "On Duty: " + formattedStartTime + " to " + formattedEndTime + ". "
+        cellA.onDutyLabel?.text = "On Duty: " + formattedStartTime + " to " + formattedEndTime + ". "
         
         // Calculate duration left in shift
-        let formatter = DateComponentsFormatter()
         formatter.allowedUnits = [.hour, .minute, .second]
         formatter.unitsStyle = .abbreviated
         let formattedString = formatter.string(from: TimeInterval(Double(therapist.duration)))!
         if startTime < startDate && startDate < endTime {
-            cell.onDutyLabel?.text = (cell.onDutyLabel?.text ?? "") + " \(formattedString) till end"
+            cellA.onDutyLabel?.text = (cellA.onDutyLabel?.text ?? "") + " \(formattedString) till end"
         }
         
         // Calculate time left til shift starts
         if startDate < startTime {
             let timeDifference = Calendar.current.dateComponents([.hour, .minute], from: startTime, to: startDate)
-            cell.onDutyLabel?.text = (cell.onDutyLabel?.text ?? "") + "\(timeDifference.hour!)hr \(timeDifference.minute!)min till start"
+            cellA.onDutyLabel?.text = (cellA.onDutyLabel?.text ?? "") + "\(timeDifference.hour!)hr \(timeDifference.minute!)min till start"
         }
-        
-        // if no one on duty
 
-
-        return cell
+        return cellA
+       
 
     }
 }
